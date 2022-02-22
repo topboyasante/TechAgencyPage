@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+:root{
+    --color1 : #FF6978;
+    --color2 : #FFFCF9;
+    --color3 : #B1EDE8;
+    --color4 : #051D40;
+    --color5 : grey;
+}
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+//Navbar
+header{
+    .navbar-section{
+        .navbar{
+            padding: 0em 2em;
+            img{
+                width: 60px;
+            }
+            .navbar-links{
+                   
+                li{
+                    padding: 0em 1em;
+                    text-transform: uppercase;
+                    list-style: none;
+                    a{
+                        &:hover{
+                            color: #FF6978;
+                            border-bottom: 2px solid var(--color3);
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                color: var(--color4);
+            }
+            .navbar-toggle{
+                display: none;
+            }
+        }
+    }
+}
+
+#footer{
+    background-color: var(--color4);
+    padding: 1em 0em;
+    .container-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        h4{
+            color: white;
+            text-transform: uppercase;
+            padding: 0.5em 0em;
+        }
+        ul{
+            list-style: none;
+            li{
+                     padding: 0.4em 0em;
+    
+                a{
+                    text-decoration: none;
+                    color: grey;
+                    text-transform: uppercase;
+    
+                    &:hover{
+                        color: var(--color1);
+                        padding-left: 0.2em;
+                        transition: 1s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Media Queries (Small Screens):
+@media (max-width:767px){
+    header{
+        .navbar-links{
+            display: none;
+        }
+        .navbar-toggle{
+            display: block !important;
+        }
+    }
+    #footer{
+       .container-footer{
+        display: block;
+        text-align: center;
+       }
+    }
+}
+
+
+
+
+//Utilities:
+.flex{
+    display: flex;
+}
+.flex-jcsb{
+    justify-content: space-between;
+}
+.flex-aic{
+    align-items: center;
+}
+.flex-fdc{
+    flex-direction: column;
+}
+.flex-jcsa{
+    justify-content: space-around;
+}
+p{
+    font-weight: 100;
+}
