@@ -11,18 +11,17 @@
 <body>
     <!--Header: Navbar, Hero Section.-->
     <header id="header">
-        <section class="navbar-section">
-            <div class="navbar flex flex-jcsb flex-aic">
-                <img src="/photo_2022-02-22_02-32-34-removebg-preview.png" alt="logo">
-                <ul class="navbar-links flex flex-jcsb flex-aic">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
-                <a href="#" class="navbar-toggle"><i class="fa fa-bars"></i></a>
-            </div>
-        </section>
+         <nav class="navbar flex flex-aic flex-jcsb">
+             <div class="brand-logo">
+                 <img src="/photo_2022-02-22_02-32-34-removebg-preview.png" alt="logo" style="width: 50px;">
+             </div>
+             <a href="#" class="navbar-toggle" id="toggle-nav" ><i class="fa fa-xl fa-bars"></i></a>
+             <div class="navbar-links flex flex-aic flex-jcsb" id="navbar-items">
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">Contact</a></li>
+             </div>
+         </nav>
     </header>
 
     <!--Hero Section:-->
@@ -35,6 +34,7 @@
         
     </section>
 
+    <br>
     <!--Footer-->
     <footer id="footer">
         <div class="container-footer">
@@ -68,5 +68,7 @@
         </div>
 
    </footer>
+
+   <script src="/script.js"></script>
 </body>
 </html>

@@ -19,34 +19,29 @@ body {
   padding: 0;
 }
 
-header .navbar-section .navbar {
-  padding: 0em 2em;
+header .navbar {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-header .navbar-section .navbar img {
-  width: 60px;
+header .navbar .navbar-toggle {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  text-decoration: none;
+  color: #051D40;
+  display: none;
 }
 
-header .navbar-section .navbar .navbar-links li {
-  padding: 0em 1em;
-  text-transform: uppercase;
+header .navbar .navbar-links li {
   list-style: none;
 }
 
-header .navbar-section .navbar .navbar-links li a:hover {
-  color: #FF6978;
-  border-bottom: 2px solid var(--color3);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-header .navbar-section .navbar a {
+header .navbar .navbar-links li a {
   text-decoration: none;
-  color: var(--color4);
-}
-
-header .navbar-section .navbar .navbar-toggle {
-  display: none;
+  color: #051D40;
+  padding: 1em;
+  display: block;
 }
 
 #footer {
@@ -94,12 +89,42 @@ header .navbar-section .navbar .navbar-toggle {
   transition: 1s ease;
 }
 
-@media (max-width: 767px) {
-  header .navbar-links {
-    display: none;
+@media (max-width: 768px) {
+  header .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  header .navbar-toggle {
-    display: block !important;
+  header .navbar .navbar-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .navbar .navbar-links {
+    display: none;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .navbar .navbar-links ul {
+    width: 100%;
+  }
+  header .navbar .navbar-links ul li {
+    text-align: center;
+  }
+  header .navbar .navbar-links ul li a {
+    padding: .5rem 1rem;
+  }
+  header .navbar-links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #footer .container-footer {
     display: block;

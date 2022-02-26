@@ -18,33 +18,25 @@ body{
 
 //Navbar
 header{
-    .navbar-section{
-        .navbar{
-            padding: 0em 2em;
-            img{
-                width: 60px;
-            }
-            .navbar-links{
-                   
-                li{
-                    padding: 0em 1em;
-                    text-transform: uppercase;
-                    list-style: none;
-                    a{
-                        &:hover{
-                            color: #FF6978;
-                            border-bottom: 2px solid var(--color3);
-                            transition: 0.5s ease;
-                        }
-                    }
+    .navbar{
+        box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+        .navbar-toggle{
+            position: absolute;
+            top: 1.7rem;
+            right: 1rem;
+            text-decoration: none;
+            color: #051D40;
+            display: none;
+        }
+        .navbar-links{
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: #051D40;
+                    padding: 1em;
+                    display: block;
                 }
-            }
-            a{
-                text-decoration: none;
-                color: var(--color4);
-            }
-            .navbar-toggle{
-                display: none;
             }
         }
     }
@@ -85,13 +77,32 @@ header{
 }
 
 //Media Queries (Small Screens):
-@media (max-width:767px){
+@media (max-width:768px){
     header{
-        .navbar-links{
-            display: none;
+        .navbar{
+            flex-direction: column;
+            align-items: flex-start;
+            .navbar-toggle{
+                display: flex;
+            }
+            .navbar-links{
+                display: none;
+                width: 100%;
+                flex-direction: column;
+               ul{
+                    width: 100%;
+                    li{
+                        text-align: center;
+                        a{
+                            padding: .5rem 1rem;
+                        }
+                    }
+               }
+            }
         }
-        .navbar-toggle{
-            display: block !important;
+    
+        .navbar-links.active{
+            display: flex;
         }
     }
     #footer{
