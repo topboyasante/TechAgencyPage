@@ -44,6 +44,47 @@ header .navbar .navbar-links li a {
   display: block;
 }
 
+.hero-section {
+  padding: 2em;
+  height: 100vh;
+}
+
+.hero-section h1 {
+  font-size: 5rem;
+}
+
+.hero-section h2 {
+  font-size: 3rem;
+}
+
+#about .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0em 1em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#about .features .neumorphism-box {
+  text-align: center;
+  border: 1px solid white;
+  width: 30vw;
+  background: #ffffff;
+  -webkit-box-shadow: 20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff;
+}
+
+#about .features h2 {
+  color: #051D40;
+}
+
 #footer {
   background-color: var(--color4);
   padding: 1em 0em;
@@ -126,6 +167,34 @@ header .navbar .navbar-links li a {
     display: -ms-flexbox;
     display: flex;
   }
+  .hero-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 1em;
+  }
+  .hero-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .hero-section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .hero-section img {
+    width: 80vw;
+  }
+  #about .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .features .neumorphism-box {
+    margin: 1em 0em;
+    width: 80vw;
+  }
   #footer .container-footer {
     display: block;
     text-align: center;
@@ -163,6 +232,6 @@ header .navbar .navbar-links li a {
 }
 
 p {
-  font-weight: 100;
+  font-weight: 300;
 }
 /*# sourceMappingURL=homepage.css.map */

@@ -43,6 +43,39 @@ header{
     }
 }
 
+//Hero section
+.hero-section{
+    padding: 2em;
+    height: 100vh;
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+}
+
+//About section
+#about{
+    .features{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0em 1em;
+        flex-wrap: wrap;
+        .neumorphism-box{
+            text-align: center;
+            border: 1px solid white;
+            width: 30vw;
+            background: #ffffff;
+            box-shadow:  20px 20px 60px #d9d9d9,-20px -20px 60px #ffffff;
+        }
+        h2{
+            color: #051D40;
+        }
+    }
+}
+
 #footer{
     background-color: var(--color4);
     padding: 1em 0em;
@@ -106,6 +139,30 @@ header{
             display: flex;
         }
     }
+    .hero-section{
+        flex-direction: column-reverse;
+        padding: 1em;
+        h1{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        h2{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        img{
+            width: 80vw;
+        }
+    }
+    #about{
+        .features{
+            flex-direction: column;
+            .neumorphism-box{
+                margin: 1em 0em;
+                width: 80vw;
+            }
+        }
+    }
     #footer{
        .container-footer{
         display: block;
@@ -134,5 +191,5 @@ header{
     justify-content: space-around;
 }
 p{
-    font-weight: 100;
+    font-weight: 300;
 }
